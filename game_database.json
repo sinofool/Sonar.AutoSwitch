@@ -1,70 +1,74 @@
 [
-  {	
-	"SonarProfileName": "Apex Legends",
-	"ExeName": "r5apex"
-  },
-  {	
-	"SonarProfileName": "Apex Legends",
-	"ExeName": "r5apex_dx12"
+  {
+    "SonarProfileName": "Apex Legends",
+    "ExeName": "r5apex"
   },
   {
-	"SonarProfileName": "Baldur's Gate 3",
-	"ExeName": "bg3"
+    "SonarProfileName": "Apex Legends",
+    "ExeName": "r5apex_dx12"
   },
   {
-	"SonarProfileName": "Baldur's Gate 3",
-	"ExeName": "bg3_dx11"
+    "SonarProfileName": "Baldur's Gate 3",
+    "ExeName": "bg3"
   },
   {
-	"SonarProfileName": "Cyberpunk 2077",
-	"ExeName": "Cyberpunk2077"
+    "SonarProfileName": "Baldur's Gate 3",
+    "ExeName": "bg3_dx11"
   },
   {
-	"SonarProfileName": "Diablo® IV by Blizzard",
-	"ExeName": "Diablo IV"
+    "SonarProfileName": "Black Myth: Wukong",
+    "ExeName": "b1-Win64-Shipping"
   },
   {
-	"SonarProfileName": "Diablo® IV by Blizzard",
-	"ExeName": "Diablo III"
+    "SonarProfileName": "Cyberpunk 2077",
+    "ExeName": "Cyberpunk2077"
   },
   {
-	"SonarProfileName": "Diablo® IV by Blizzard",
-  	"ExeName": "D2R"
+    "SonarProfileName": "Diablo® IV by Blizzard",
+    "ExeName": "Diablo IV"
   },
   {
-	"SonarProfileName": "Diablo® IV by Blizzard",
- 	"ExeName": "PathOfExile"
+    "SonarProfileName": "Diablo® IV by Blizzard",
+    "ExeName": "Diablo III"
   },
   {
-	"SonarProfileName": "The Elder Scrolls Online",
-	"ExeName": "eso64"
+    "SonarProfileName": "Diablo® IV by Blizzard",
+    "ExeName": "D2R"
   },
   {
-	"SonarProfileName": "League of Legends",
-	"ExeName": "League of Legends"
+    "SonarProfileName": "Diablo® IV by Blizzard",
+    "ExeName": "PathOfExile"
   },
   {
-	"SonarProfileName": "League of Legends",
-	"ExeName": "LeagueClient"
+    "SonarProfileName": "The Elder Scrolls Online",
+    "ExeName": "eso64"
   },
   {
-	"SonarProfileName": "Overwatch 2",
- 	"ExeName": "Overwatch"
+    "SonarProfileName": "League of Legends",
+    "ExeName": "League of Legends"
   },
   {
-	"SonarProfileName": "Starfield",
-	"ExeName": "Starfield"
+    "SonarProfileName": "League of Legends",
+    "ExeName": "LeagueClient"
   },
   {
-	"SonarProfileName": "World of Warcraft",
-	"ExeName": "Wow"
+    "SonarProfileName": "Overwatch 2",
+    "ExeName": "Overwatch"
   },
   {
-	"SonarProfileName": "World of Warcraft",
-	"ExeName": "WowClassic"
+    "SonarProfileName": "Starfield",
+    "ExeName": "Starfield"
   },
   {
-	"SonarProfileName": "World of Warcraft",
-	"ExeName": "Gw2-64"
+    "SonarProfileName": "World of Warcraft",
+    "ExeName": "Wow"
+  },
+  {
+    "SonarProfileName": "World of Warcraft",
+    "ExeName": "WowClassic"
+  },
+  {
+    "SonarProfileName": "World of Warcraft",
+    "ExeName": "Gw2-64"
   }
 ]
