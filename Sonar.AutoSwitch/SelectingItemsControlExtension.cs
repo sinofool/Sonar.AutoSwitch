@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Numerics;
+using System.Security.Cryptography;
 using Avalonia;
 using Avalonia.Animation.Easings;
 using Avalonia.Controls;
@@ -49,6 +50,8 @@ public class SelectingItemsControlExtension
         StartOffsetAnimation(newSelection, oldSelection);
     }
 
+    private static Vector3 ConvertVector3DToVector3(Vector3D vector3D) => new Vector3((float)vector3D.X, (float)vector3D.Y, (float)vector3D.Z);
+
     private static void StartOffsetAnimation(TemplatedControl newSelection, Visual oldSelection)
     {
         // Find the indicator border
@@ -63,11 +66,11 @@ public class SelectingItemsControlExtension
         if (pipeVisual == null || newSelectionVisual == null || oldSelectionVisual == null) return;
 
         // Calculate the offset between old and new selections
-        Vector3 selectionOffset = oldSelectionVisual.Offset - newSelectionVisual.Offset;
+        Vector3 selectionOffset = ConvertVector3DToVector3(oldSelectionVisual.Offset - newSelectionVisual.Offset); 
         // Check whether the offset is vertical (e.g. ListBox) or horizontal (e.g. TabControl)
         // Note this code assumes the items are aligned in the SelectingItemsControl
         bool isVerticalOffset = selectionOffset.Y != 0;
-        float offset = isVerticalOffset ? selectionOffset.Y : selectionOffset.X;
+        double offset = isVerticalOffset ? selectionOffset.Y : selectionOffset.X;
 
         Compositor compositor = pipeVisual.Compositor;
         // This is required
@@ -78,9 +81,9 @@ public class SelectingItemsControlExtension
         Vector3KeyFrameAnimation offsetAnimation = compositor.CreateVector3KeyFrameAnimation();
         offsetAnimation.Target = "Offset";
         offsetAnimation.InsertKeyFrame(0f,
-            isVerticalOffset ? pipeVisual.Offset with {Y = offset} : pipeVisual.Offset with {X = offset},
+            ConvertVector3DToVector3(isVerticalOffset ? pipeVisual.Offset with { Y = offset } : pipeVisual.Offset with { X = offset }),
             quadraticEaseIn);
-        offsetAnimation.InsertKeyFrame(1f, pipeVisual.Offset, quadraticEaseIn);
+        offsetAnimation.InsertKeyFrame(1f, ConvertVector3DToVector3(pipeVisual.Offset), quadraticEaseIn);
         offsetAnimation.Duration = TimeSpan.FromMilliseconds(250);
 
         // Create small scale animation so the pipe will "stretch" while it's moving

@@ -22,10 +22,9 @@ internal class Program
         return AppBuilder.Configure<App>()
             .With(new Win32PlatformOptions
             {
-                CompositionBackdropCornerRadius = 8
+                WinUICompositionBackdropCornerRadius = 8
             })
             .UsePlatformDetect()
-            .LogToTrace()
-            .UseFAWindowing();
+            .LogToTrace();
     }
 }
